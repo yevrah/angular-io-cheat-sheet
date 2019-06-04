@@ -13,6 +13,16 @@ ng new --minimal=true   \                       // Minal app setup - less opined
 ng update @angular/core @angular/cli            // Update to latest Angular - eg Aio7 to Aio8
 ```
 
+## Control where features are added
+
+```
+$ mkdir dashboard
+$ cd dashboard
+$ ng g m dashboard --routing --flat   # add feature module in current folder
+$ ng g c summary/Summary --flat       # add your components
+$ ng g c detail/Detail --flat         # add another component
+```
+
 ## Add Proxy to API - Avoid CORS
 
 If your running an API on a dev sentence (eg Flask, Django, Simplerr) that would normally run on the same server you can proxy it through ng-serve. Create a script in package.json and start the project with `npm start` as follows:
